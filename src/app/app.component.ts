@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventBus } from 'vertx3-eventbus-client';
 
 import { ApiService } from './shared';
 
@@ -15,5 +16,9 @@ export class AppComponent {
 
   constructor(private api: ApiService) {
     this.title = this.api.title;
+
+    // here is the eventbus part that fails
+    let eb = new EventBus('http://localhost:8080');
+    eb.send('queue', 'hello vertx', (res) => console.log('res: ' + res));
   }
 }

@@ -35,6 +35,7 @@
     "@angular/router": "4.0.1",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.3",
+    "vertx3-eventbus-client":"3.4.1",
     "rxjs": "^5.0.1",
     "zone.js": "^0.8.5"
   },
